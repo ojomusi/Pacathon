@@ -151,11 +151,7 @@ public class TournamentBehavior implements Behavior {
         }
     }
 
-    // Kill Pacman if updates exceed a threshold
-    if (updatesSinceLastScore > 60 * 10) {
-        pacman.kill();
-        return Direction.UP; // This can be adjusted based on your game logic
-    }
+    
 
     // If newDirection is null, proceed with A* or BFS to find the closest pellet
     if (newDirection == null) {

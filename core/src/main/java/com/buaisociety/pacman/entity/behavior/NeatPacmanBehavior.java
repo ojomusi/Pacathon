@@ -298,7 +298,7 @@ public Direction getDirection(@NotNull Entity entity) {
         AStar aStarInstance = new AStar(pacman.getMaze());
         Vector2i posStoreInt = new Vector2i((int) (pacman.getPosition().x() * 10), (int) (pacman.getPosition().y() * 10));
         if (lastPosition == null) {
-            lastPosition = new Vector2i(posStoreInt); // Initialize lastPosition at start
+            lastPosition = new Vector2i(posStoreInt); // Initialize lastPosition at start 
         }
         closestPellet = aStarInstance.findNearestPellet(posStoreInt); // Compute closest pellet here
         Map<Direction, SearchResult> bfsResults = aStarInstance.findNearestPelletBFS(posStoreInt);
