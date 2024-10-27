@@ -1,3 +1,40 @@
+# Pacathon Submission
+
+## What is your team name?
+
+_Team Name:_ Rukevwe
+
+---
+
+## Who is on your team?
+
+| Name          | BU Email        | BU ID     | GitHub Account      |
+|---------------|-----------------|-----------|---------------------|
+| Rukevwe Omusi              |  ojomusi@bu.edu               | U48761806          | ojomusi                    |
+|               |                 |           |                     |
+|               |                 |           |                     |
+
+---
+
+## How does your Pacman work?
+
+My Pac-Man model utilizes A* Search and Breadth-First Search (BFS) algorithms to identify the nearest pellet while prioritizing power pellets based on distance. The model implements a scoring system that penalizes the agent for failing to find any pellets within a 10-second timeframe. Suppose the agent has not located any pellets in 5 seconds. In that case, it reviews its movement history to determine if it has repeatedly moved in the same direction for the last four updates. In such cases, the model evaluates available movement options and directs the agent to change its trajectory.
+
+Additionally, the agent is rewarded for maintaining a consistent direction when moving towards pellets, while also taking into account the closest pellet's position and ensuring that it can navigate without hitting walls. The final direction is chosen based on neural network outputs, which consider factors like movement history, available directions, and distances to pellets. 
+
+
+---
+
+## Checklist:
+
+I ensure that I:
+- [X ] have included my model's weights (the `.json` file) in my commit
+- [X ] have configured the tournament behavior to use those weights
+- [X ] copied over any code needed to run my model (e.g., all inputs to the neural network)
+- [X ] tested the tournament at least once before submission (just to make sure everything is working)
+- [X ] have not intentionally modified the game state in any way
+
+
 # Pacathon
 
 Welcome to the Fall 2024 Pacathon! We have already setup Pacman and some basic Neural Network stuff for you to get started. Your task is to build the best Pacman player. You can use any algorithm you want, but we recommend sticking to Neural Networks through Neat4j (the library we have been building out during AI Society meetings).
